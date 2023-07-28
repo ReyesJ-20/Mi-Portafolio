@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/carpeta.png" type="image/x-icon">
+    <title>Mi portafolio</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
+    <script src="https://kit.fontawesome.com/b3f17f1dac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="flex w-full fixed top-0 z-1">
+        <nav class="flex justify-content-between w-full navbar">
+            <span class="logo cursor-pointer" onclick="scrollToSection('home')">
+                <img src="./img/Mi logo.png" alt="Logo portafolio" width="50 " height="20">
+            </span>
+            <input type="checkbox" aria-label="Checkbox para mostrar y quitar hamburger menu" class="checkbox xl:hidden">
+            <div class="hamburger__lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="header__info flex align-items-center gap-3">
+                <ul class="flex flex-column xl:flex-row list-none">
+                    <li onclick="scrollToSection('about')">Sobre mí</li>
+                    <li onclick="scrollToSection('services')">Mis certificaciones</li>
+                    <li onclick="scrollToSection('portfolio')">Mis proyectos</li>
+                    <li onclick="scrollToSection('contactame')">Contactame</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--HOME PAGE -->
+    <div class="container">
+        <section id="home" class="home__page flex align-items-center justify-content-center xl\:justify-content-between grid grid-nogutter gap-4">
+            <div class="left__content col-12 xl:col-6">
+                <div class="message__bubble triangle mb-4 md:mb-2">
+                    <div class="message__text p-2 sm:p-3 text-center">
+                        <p>¡Hola!, mi nombre es </p>
+                    </div>
+                </div>
+                <h1 class="text-3xl sm:text-5xl md:text-7xl">Javier Reyes</h1>
+                <p class="text-gray-500">
+                    Actualmente estudio la carrera de Ing. en TIC'S
+                </p>
+                <div class="home__buttons flex align-items-center gap-2 mt-6">
+                    <a href="./assets/CURRICULUM.pdf" aria-label="Descargar curriculum" class="cursor-pointer border-round-lg no-underline" download>Descargar CV</a>
+                    <button onclick="scrollToSection('portfolio')" aria-label="Deslizar a sección portafolio para mostrar mis trabajos" class="cursor-pointer border-round-lg">Mi trabajo</button>
+                </div>
+            </div>
+            <div class="right__content col-9 sm:col-6 xl:col-5">
+                <img src="./img/mi_Foto.png" alt="Foto perfil" width="100" height="100">
+            </div>
+        </section>
+    </div>
+
+    <!--PORTFOLIO -->
+    <section class="trabajos" id="trabajos">
+        <h2>Mis proyectos</h2>
+        <nav>
+            <a href="javascript:void(0)" class="borde" id="item" onclick="verCategoria('item')">Todos</a>
+            <a href="javascript:void(0)" class="" id="disenio" onclick="verCategoria('disenio')">Diseño</a>
+            <a href="javascript:void(0)" class="" id="programacion" onclick="verCategoria('programacion')">Programación</a>
+            <a href="javascript:void(0)" class="" id="animaciones" onclick="verCategoria('animaciones')">Animaciones</a>
+        </nav>
+
+        <div class="galeria">
+            <div class="item disenio">
+                <img src="img/fisioterapia web.png" alt="">
+                <div class="info">
+                    <h3>Sitio web para una clinica de fisioterapia</h3>
+                    <span>html</span><span>css</span><span>javascript</span><span>boostrap</span>
+                    <a href="https://github.com/ReyesJ-20/Proyecto-Fitliben.git">Ver Trabajo</a>
+                </div>
+            </div>
+            <div class="item programacion">
+                <img src="img/Concurso_Prog.png" alt="">
+                <div class="info">
+                    <h3>Flyer informativo sobre el concurso de <br> programaciòn se llevò acabo en mi universidad</h3>
+                    <span>html</span><span>css</span>
+                    <a href="https://github.com/ReyesJ-20/Web-Flyer.git">Ver Trabajo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+</body>
+
+</html>
